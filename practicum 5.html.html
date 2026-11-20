@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neural Netics - Responsive Flexbox Navigation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f9fafb;
+    }
+
+    header {
+      width: 100%;
+      background-color: #111827;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .brand span {
+      color: #38bdf8;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 0.75rem;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #38bdf8;
+      background-color: rgba(56, 189, 248, 0.15);
+    }
+
+    .nav-links .btn-cta {
+      background-color: #0284c7;
+      color: #ffffff;
+    }
+
+    .nav-links .btn-cta:hover {
+      background-color: #0369a1;
+      color: #ffffff;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .content h1 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+      }
+
+      .nav-links li,
+      .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#" class="brand">Neural<span>Netics</span></a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Overview</a></li>
+        <li><a href="#architectures">Architectures</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#deploy" class="btn-cta">Deploy API</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Neural Netics: Cognitive Systems Platform</h1>
+    <p>
+      Explore adaptive deep learning architectures, real-time inference engines, and autonomous neural pipelines.
+      Resize the browser window from wide desktop to mobile to test how the Neural Netics navigation bar adapts cleanly across viewports.
+    </p>
+  </main>
+</body>
+</html>
